@@ -101,3 +101,27 @@ function acfgbc_SayHelloEventsBlock_rc( $block, $content = '', $is_preview = fal
 	}
 	include get_template_directory() . '/parts/SayHelloEventsBlock.php';
 }
+
+add_action( 'acf/init', 'acfgbc_SayHelloCircleSliderBlock' );
+function acfgbc_SayHelloCircleSliderBlock() {
+	if ( ! function_exists( 'acf_register_block' ) ) {
+		return;
+	}
+	acf_register_block( array(
+		'name'            => 'acfgbcSayHelloCircleSliderBlock',
+		'title'           => __( 'Say Hello Circle Slider Block' ),
+		'description'     => __( 'Say Hello Circle Slider Block' ),
+		'render_callback' => 'acfgbc_SayHelloCircleSliderBlock_rc',
+		'category'        => 'sayhelloblocks',
+		'icon'            => 'tagcloud',
+		'mode'            => 'preview',
+		'supports'        => array( 'align' => false, 'multiple' => true, ),
+		'keywords'        => array( 'Row', 'Common' ),
+	) );
+}
+function acfgbc_SayHelloCircleSliderBlock_rc( $block, $content = '', $is_preview = false ) {
+	if ($is_preview) {
+		include_once get_template_directory().'/parts/editor-styles.php';
+	}
+	include get_template_directory() . '/parts/SayHelloCircleSliderBlock.php';
+}
