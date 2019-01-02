@@ -1,0 +1,119 @@
+.sh-container {
+  padding-top: 60%;
+  max-height: 868px;
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+  .sh-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &.is-animating {
+      width: 320px;
+      left: 50%;
+      margin-left: -160px;
+      right: auto;
+      @include breakpoint(915px) {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+      }
+    }
+    .logo {
+      padding-top: 20px;
+      @include breakpoint(915px) {
+        padding-top: 4.306vw;
+      }
+      @include breakpoint(1440px) {
+        padding-top: 62px;
+      }
+      img {
+        max-width: 200px;
+        width: 122px;
+        @include breakpoint(915px) {
+          width: 13.889%;
+        }
+        height: auto;
+      }
+    }
+    .message {
+      padding-top: 1em;
+      @include breakpoint(915px) {
+        padding-top: 2.5em;
+      }
+      .h1, .h2, .h3, .h4 {
+        line-height: 0.85;
+      }
+    }
+    .description {
+      padding-top: 1em;
+      padding-bottom: 0;
+      padding-left: 1em;
+      padding-right: 1em;
+      @include breakpoint(915px) {
+        padding-bottom: 2em;
+      }
+      p {
+        line-height: 1.33333333;
+        font-size: 22.5px;
+        @include breakpoint(1170px) {
+          font-size: 1.875vw;
+        }
+        @include breakpoint(1440px) {
+          font-size: 27px;
+        }
+      }
+    }
+  }
+}
+
+.editor-styles-wrapper {
+  .sh-container {
+    font-family: $body-font-family;
+    color: $body-font-color;
+    .description {
+      padding-top: 1em;
+      padding-bottom: 0;
+      padding-left: 1em;
+      padding-right: 1em;
+      @include breakpoint(915px) {
+        padding-bottom: 2em;
+      }
+
+      p {
+        line-height: 1.33333333;
+        font-size: 22.5px;
+        @include breakpoint(1170px) {
+          font-size: 1.875vw;
+        }
+        @include breakpoint(1440px) {
+          font-size: 27px;
+        }
+      }
+    }
+  }
+}
+
+
+@include mui-series {
+  .logo {
+    @include mui-queue(1.5s, 0s, slide($direction: up));
+  }
+ }
+
+@include mui-series {
+  .message {
+    @include mui-queue(2s, 0s, fade(), slide($direction: up));
+  }
+  .anim-step-two {
+    @include mui-queue(2.5s, 0s, slide($direction: up),fade());
+  }
+}
+

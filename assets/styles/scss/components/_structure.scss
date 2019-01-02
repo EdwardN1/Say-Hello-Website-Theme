@@ -1,0 +1,78 @@
+.grid-container {
+  &.nopadding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.blue-background {
+  background-color: $blue;
+}
+
+.dark-blue-background {
+  background-color: $dark-blue;
+}
+
+.black-background {
+  background-color: $black;
+}
+
+.yellow-background {
+  background-color: $yellow;
+}
+
+.orange-background {
+  background-color: $orange;
+}
+
+.red-background {
+  background-color: $red;
+}
+
+.purple-background {
+  background-color: $purple;
+}
+
+.dark-purple-background {
+  background-color: $dark-purple;
+}
+
+.lime-green-background {
+  background-color: $lime-green;
+}
+
+.teal-background {
+  background-color: $teal;
+}
+
+.hide-for-med-large {
+  @include hide-for(large);
+}
+
+.show-for-med-large {
+  @include show-for(large);
+}
+
+.red-spacer {
+  position: relative;
+  padding-bottom: 15px;
+  &:after {
+    position: absolute;
+    width: 100%;
+    content: " ";
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    height: 130px;
+    max-height: 170px;
+    background-image: url("../images/red-spacer.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    image-rendering: pixelated;
+    @include breakpoint(915px) {
+      background-size: contain;
+      height: 11.806vw;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.h1, .h2, .h3, .h4 {
+  font-family: hwt-artz, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.h2, .h3, .h4 {
+  line-height: 0.8;
+  margin: 0;
+}
+
+.h1 {
+  font-size: 54px;
+  position: relative;
+  @include breakpoint(1080px) {
+    font-size: 5vw;
+  }
+  @include breakpoint(1440px) {
+    font-size: 72px;
+  }
+  &.blue.underline {
+    &:before {
+      background-image: url("../images/underline-blue.png");
+    }
+  }
+  &.orange.underline {
+    &:before {
+      background-image: url("../images/underline-orange.png");
+    }
+  }
+  &.purple.underline {
+    &:before {
+      background-image: url("../images/underline-purple.png");
+    }
+  }
+  &.underline {
+    &:before {
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: contain;
+      content: " ";
+      position: absolute;
+      height: 26px;
+      left: 50%;
+      bottom: -5px;
+      margin-left: -135px;
+      width: 270px;
+      @include breakpoint(915) {
+        bottom: -7px;
+        margin-left: -237px;
+        width: 473px;
+      }
+    }
+  }
+}
+
+.h2 {
+  font-size: 72px;
+}
+
+.h3 {
+  font-size: 36px;
+  position: relative;
+  &.underline {
+    &:before {
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: contain;
+      content: " ";
+      position: absolute;
+      height: 26px;
+      left: 50%;
+      bottom: -18px;
+      margin-left: -110px;
+      width: 260px;
+      background-image: url("../images/underline-transparent.png");
+      /*@include breakpoint(915) {
+        bottom: -7px;
+        margin-left: -237px;
+        width: 473px;
+      }*/
+    }
+  }
+}
+
+.blue {
+  color: $blue;
+}
+
+.dark-blue {
+  color: $dark-blue;
+}
+
+.black {
+  color: $black;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.orange {
+  color: $orange;
+}
+
+.red {
+  color: $red;
+}
+
+.purple {
+  color: $purple;
+}
+
+.dark-purple {
+  color: $dark-purple;
+}
+
+.lime-green {
+  color: $lime-green;
+}
+
+.teal {
+  color: $teal;
+}

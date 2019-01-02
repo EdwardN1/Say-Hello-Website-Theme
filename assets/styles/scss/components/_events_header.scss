@@ -1,0 +1,14 @@
+.events-header {
+  background-color: #feca47;
+  margin-top: -3px;
+  color: $purple;
+  .titles {
+    .h2 {
+      padding-top: 1.5em;
+    }
+  }
+  .description {
+    color: $dark-blue;
+    padding-top: 3em;
+  }
+}
