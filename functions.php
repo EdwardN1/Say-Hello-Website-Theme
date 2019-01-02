@@ -44,4 +44,10 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 // require_once(get_template_directory().'/functions/login.php'); 
 
 // Customize the WordPress admin
-// require_once(get_template_directory().'/functions/admin.php'); 
+// require_once(get_template_directory().'/functions/admin.php');
+
+define('FUNCTIONSPATH', get_template_directory() . '/functions/');
+foreach (glob(FUNCTIONSPATH.'autoinc-*.php') as $filename)
+{
+	require_once ($filename);
+}

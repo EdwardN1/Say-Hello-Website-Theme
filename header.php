@@ -30,6 +30,8 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+        <link rel="stylesheet" href="https://use.typekit.net/mjd0yzh.css">
+
 		<?php wp_head(); ?>
 
 	</head>
@@ -43,10 +45,10 @@
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				
-				<header class="header" role="banner">
+				<!--<header class="header" role="banner">-->
 							
 					 <!-- This navs will be applied to the topbar, above all content 
 						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+					 <?php //get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 	 	
-				</header> <!-- end .header -->
+				<!--</header>--> <!-- end .header -->
