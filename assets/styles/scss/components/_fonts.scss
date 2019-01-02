@@ -99,6 +99,8 @@
   &.purple.short.underline {
     &:before {
       background-image: url("../images/underline-purple-short.png");
+      margin-left: -85px;
+      bottom: -23px;
     }
   }
 }

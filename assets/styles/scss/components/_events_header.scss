@@ -11,4 +11,19 @@
     color: $dark-blue;
     padding-top: 3em;
   }
+  .buttons a {
+    margin-right: 0.2em;
+  }
+}
+
+@include mui-series {
+  .slide-in-left {
+    @include mui-queue(1s, 0s, fade, slide($direction: right));
+  }
+}
+
+@include mui-series {
+  .slide-in-right {
+    @include mui-queue(1s, 0s, fade, slide($direction: left));
+  }
 }
