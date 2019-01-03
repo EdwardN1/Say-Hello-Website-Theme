@@ -21,7 +21,7 @@ if ( $anchor_tag ) {
             <div class="description">
 				<?php echo $description; ?>
             </div>
-            <div class="btn-link">
+            <div class="btn-link" data-magellan>
                 <a href="<?php echo $button_link; ?>" class="green-scroll-button"><?php echo $button_text; ?></a>
             </div>
         </div>
@@ -47,7 +47,7 @@ if ( $anchor_tag ) {
             <div class="description">
 				<?php echo $description; ?>
             </div>
-            <div>
+            <div data-magellan>
                 <a href="<?php echo $button_link; ?>" class="green-scroll-button"><?php echo $button_text; ?></a>
             </div>
         </div>

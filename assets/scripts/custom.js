@@ -18,4 +18,6 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    $('[data-slick-slider]').slick();
+
 });

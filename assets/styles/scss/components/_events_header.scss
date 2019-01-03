@@ -2,6 +2,7 @@
   background-color: #feca47;
   margin-top: -3px;
   color: $purple;
+  padding-bottom: 2em;
   .titles {
     .h2 {
       padding-top: 1.5em;
@@ -17,13 +18,13 @@
 }
 
 @include mui-series {
-  .slide-in-left {
+  .slide-btn-in-left {
     @include mui-queue(1s, 0s, fade, slide($direction: right));
   }
 }
 
 @include mui-series {
-  .slide-in-right {
+  .slide-btn-in-right {
     @include mui-queue(1s, 0s, fade, slide($direction: left));
   }
 }

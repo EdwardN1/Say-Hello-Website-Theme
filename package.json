@@ -45,6 +45,7 @@
     "update-foundation": "npm install foundation-sites"
   },
   "dependencies": {
+    "slick-carousel": "^1.8.1",
     "waypoints": "^4.0.1"
   }
 }

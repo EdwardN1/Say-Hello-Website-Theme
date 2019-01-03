@@ -18,7 +18,7 @@
     width: 100%;
     height: 88px;
     left: 0;
-    bottom: 0;
+    bottom: -3px;
     z-index: 99;
   }
   .hide-for-med-large {
@@ -70,6 +70,7 @@
   }
   .left-column {
     padding-left: 10%;
+    overflow: hidden;
     .green-scroll-button {
       width: 240px;
       height: 270px;
@@ -129,17 +130,17 @@
 
 @include mui-series {
   .from-bottom-right {
-    @include mui-queue(1s, 0s, fade, slide($direction: up), slide($direction: left));
+    @include mui-queue(1s, 0s, fade(), slide($direction: up), slide($direction: left));
   }
 }
 @include mui-series {
   .description {
-    @include mui-queue(1s, 0s, fade, slide($direction: up));
+    @include mui-queue(1s, 0s, fade(), slide($direction: up));
   }
 }
 @include mui-series {
   .btn-link {
-    @include mui-queue(1s, 0s, fade, slide($direction: up));
+    @include mui-queue(1s, 0s, fade(), slide($direction: up));
   }
 }
 

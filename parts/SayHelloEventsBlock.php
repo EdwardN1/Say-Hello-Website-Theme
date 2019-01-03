@@ -15,7 +15,7 @@ if ( $anchor_tag ) {
         <h2 class="h2"><?php echo $heading; ?></h2>
         <h3 class="h3 purple short underline"><?php echo $sub_heading; ?></h3>
     </div>
-    <div class="description-container" data-waypoint data-waypoint-offset="bottom-in-view"
+    <div class="description-container" data-waypoint data-waypoint-offset="50%"
          data-waypoint-direction="down"
          data-waypoint-class="is-animating">
         <div class="description">
@@ -24,9 +24,9 @@ if ( $anchor_tag ) {
     </div>
 
 	<?php if ( have_rows( 'buttons' ) ) : ?>
-        <div class="buttons text-center" data-waypoint data-waypoint-offset="bottom-in-view"
+        <div class="buttons text-center" data-waypoint data-waypoint-offset="50%"
              data-waypoint-direction="down"
-             data-waypoint-class="is-animating">
+             data-waypoint-class="is-animating" data-magellan>
 			<?php while ( have_rows( 'buttons' ) ) : the_row(); ?>
 				<?php $text = get_sub_field( 'text' ); ?>
 				<?php $link = get_sub_field( 'link' ); ?>
@@ -34,10 +34,10 @@ if ( $anchor_tag ) {
 				<?php
 				$btnClass = '';
 				if ( $animation == 'Slide In Left' ) {
-					$btnClass = ' slide-in-left';
+					$btnClass = ' slide-btn-in-left';
 				}
 				if ( $animation == 'Slide In Right' ) {
-					$btnClass = ' slide-in-right';
+					$btnClass = ' slide-btn-in-right';
 				}
 				?>
                 <a href="<?php echo $link; ?>" class="purple-button<?php echo $btnClass; ?>"><?php echo $text; ?></a>

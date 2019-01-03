@@ -18,7 +18,7 @@ if ( have_rows( 'heading_values' ) ):
 		$start_time = $day . ' ' . $month . ' ' . $year . ' ' . get_sub_field( 'start_time' );
 		$end_time   = $day . ' ' . $month . ' ' . $year . ' ' . get_sub_field( 'end_time' );
 
-		error_log( '$start_time = ' . $start_time . ' $end_time = ' . $end_time . ' $now = ' . date( 'd F Y g:i a', $now ) );
+		//error_log( '$start_time = ' . $start_time . ' $end_time = ' . $end_time . ' $now = ' . date( 'd F Y g:i a', $now ) );
 		if ( strtotime( $start_time ) < $now ) {
 			if ( strtotime( $end_time ) > $now ) {
 				$default_heading       = get_sub_field( 'text' );

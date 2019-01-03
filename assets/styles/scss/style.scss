@@ -69,7 +69,12 @@ CSS file.
 @import "components/homepage-header";
 @import "components/discover-how";
 @import "components/events_header";
+@import "components/events-slider";
+@import "components/contact_block";
 @import "components/admin";
 @import "components/fonts";
 @import "components/structure";
 @import "components/elements";
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
+

@@ -73,7 +73,7 @@ function sh_discover_how() {
 
 function sh_discover_how_rc( $block, $content = '', $is_preview = false ) {
 	if ($is_preview) {
-		include_once get_template_directory().'parts/editor-styles.php';
+		include_once get_template_directory().'/parts/editor-styles.php';
 	}
 	include get_template_directory() . '/parts/discover-how-block.php';
 }
@@ -124,4 +124,30 @@ function acfgbc_SayHelloCircleSliderBlock_rc( $block, $content = '', $is_preview
 		include_once get_template_directory().'/parts/editor-styles.php';
 	}
 	include get_template_directory() . '/parts/SayHelloCircleSliderBlock.php';
+}
+
+add_action( 'acf/init', 'acfgbc_SayHelloContactBlock' );
+function acfgbc_SayHelloContactBlock() {
+	if ( ! function_exists( 'acf_register_block' ) ) {
+		return;
+	}
+
+	acf_register_block( array(
+		'name'            => 'acfgbcSayHelloContactBlock',
+		'title'           => __( 'Say Hello Contact Block' ),
+		'description'     => __( 'Say Hello Contact Block' ),
+		'render_callback' => 'acfgbc_SayHelloContactBlock_rc',
+		'category'        => 'sayhelloblocks',
+		'icon'            => 'tagcloud',
+		'mode'            => 'preview',
+		'supports'        => array( 'align' => false, 'multiple' => true, ),
+		'keywords'        => array( 'Row', 'Common' ),
+	) );
+
+}
+function acfgbc_SayHelloContactBlock_rc( $block, $content = '', $is_preview = false ) {
+	if ($is_preview) {
+		include_once get_template_directory().'/parts/editor-styles.php';
+	}
+	include get_template_directory() . '/parts/SayHelloContactBlock.php';
 }
