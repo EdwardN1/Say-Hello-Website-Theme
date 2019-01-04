@@ -80,6 +80,14 @@
         width: 473px;
       }*/
     }
+    &.short {
+      &:before {
+        background-image: url("../images/underline-transparent-short.png");
+        bottom: -15px;
+        margin-left: -60px;
+        width: 190px
+      }
+    }
   }
   &.blue.underline {
     &:before {
@@ -99,8 +107,8 @@
   &.purple.short.underline {
     &:before {
       background-image: url("../images/underline-purple-short.png");
-      margin-left: -85px;
-      bottom: -23px;
+      margin-left: -35px;
+      bottom: -21px;
     }
   }
 }
@@ -143,4 +151,11 @@
 
 .teal {
   color: $teal;
+}
+
+.larger-text {
+  font-size: 24px;
+  font-family: mr-eaves-xl-sans, sans-serif;
+  font-style: normal;
+  font-weight: 200;
 }

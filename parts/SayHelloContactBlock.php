@@ -18,23 +18,25 @@ if ( $anchor_tag ) {
 <div id="<?php echo $anchor_tag; ?>" class="contact-block grid-container nopadding"<?php echo $magAtt; ?>>
     <div class="titles text-center">
         <h2 class="h2"><?php echo $heading; ?></h2>
-        <h3 class="h3"><?php echo $sub_heading; ?></h3>
+        <h3 class="h3 underline short"><?php echo $sub_heading; ?></h3>
     </div>
-    <div class="contact-description text-center">
-		<?php echo $description; ?>
-    </div>
-    <div class="contacts text-center">
-        <a href="<?php echo $tel_HREF ?>"><?php echo $telephone_number; ?></a>
-        <a href="mail:<?php echo $email_address; ?>"><?php echo $email_address; ?></a>
-    </div>
-    <div class="button text-center">
-        <a href="<?php echo $button_link; ?>" class="green-button"><?php echo $button_label; ?></a>
+    <div data-waypoint data-waypoint-offset="bottom-in-view" data-waypoint-direction="down" data-waypoint-class="is-animating">
+        <div class="contact-description text-center">
+			<?php echo $description; ?>
+        </div>
+        <div class="contacts text-center">
+            <a href="<?php echo $tel_HREF ?>" class="h4"><?php echo $telephone_number; ?></a>
+            <a href="mail:<?php echo $email_address; ?>" class="h4"><?php echo $email_address; ?></a>
+        </div>
+        <div class="buttons text-center" data-magellan>
+            <a href="<?php echo $button_link; ?>" class="green-button"><?php echo $button_label; ?></a>
+        </div>
     </div>
 	<?php if ( have_rows( 'footer_items' ) ) : ?>
         <div class="footer-section text-center">
 			<?php while ( have_rows( 'footer_items' ) ) : the_row(); ?>
 				<?php $item_text_html = get_sub_field( 'item_text_html' ); ?>
-				<span><?php echo $item_text_html; ?></span>
+                <span><?php echo $item_text_html; ?></span>
 			<?php endwhile; ?>
         </div>
 	<?php else : ?>

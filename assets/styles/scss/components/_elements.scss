@@ -121,6 +121,9 @@
   &:hover:after {
     background-image: url("../images/button-scroll-arrow-hover.png");
   }
+  &:focus {
+    color: $white;
+  }
 }
 
 .purple-button {
@@ -152,5 +155,88 @@
   }
   &:hover:after {
     background-image: url("../images/button-scroll-arrow-hover.png");
+  }
+  &:focus {
+    color: $white;
+  }
+}
+
+.green-button {
+  background-image: url("../images/button-green.png");
+  background-size: cover;
+  width: 237px;
+  height: 65px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  padding-top: 0.8em;
+  font-family: mr-eaves-xl-modern,sans-serif;
+  color: $dark-blue;
+  &:after {
+    display: inline-block;
+    content: " ";
+    padding-top: 9px;
+    padding-left: 14px;
+    background-image: url("../images/button-scroll-arrow-hover.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 0.75em;
+  }
+  &:hover {
+    background-image: url("../images/button-green-hover.png");
+    color: $white;
+  }
+  &:hover:after {
+    background-image: url("../images/button-scroll-arrow-hover.png");
+  }
+  &:focus {
+    color: $dark-blue;
+  }
+}
+
+.blue-button {
+  background-image: url("../images/button-blue.png");
+  background-size: cover;
+  width: 237px;
+  height: 65px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  padding-top: 0.8em;
+  font-family: mr-eaves-xl-modern,sans-serif;
+  color: $dark-blue;
+  &:after {
+    display: inline-block;
+    content: " ";
+    padding-top: 9px;
+    padding-left: 14px;
+    background-image: url("../images/button-scroll-arrow-hover.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 0.75em;
+  }
+  &:hover {
+    background-image: url("../images/button-blue-hover.png");
+    color: $white;
+  }
+  &:hover:after {
+    background-image: url("../images/button-scroll-arrow-hover.png");
+  }
+  &:focus {
+    color: $dark-blue;
+  }
+  &.blue-arrow-right {
+    &:after {
+      background-image: url("../images/button-blue-scroll-arrow-right.png");
+    }
+    &:hover {
+      &:after {
+        background-image: url("../images/button-scroll-arrow-right-hover.png");
+      }
+    }
   }
 }

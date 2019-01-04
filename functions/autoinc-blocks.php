@@ -151,3 +151,26 @@ function acfgbc_SayHelloContactBlock_rc( $block, $content = '', $is_preview = fa
 	}
 	include get_template_directory() . '/parts/SayHelloContactBlock.php';
 }
+add_action( 'acf/init', 'acfgbc_SayHelloColumnsBlock' );
+function acfgbc_SayHelloColumnsBlock() {
+	if ( ! function_exists( 'acf_register_block' ) ) {
+		return;
+	}
+	acf_register_block( array(
+		'name'            => 'acfgbcSayHelloColumnsBlock',
+		'title'           => __( 'Say Hello Columns Block' ),
+		'description'     => __( 'Say Hello Columns Block' ),
+		'render_callback' => 'acfgbc_SayHelloColumnsBlock_rc',
+		'category'        => 'sayhelloblocks',
+		'icon'            => 'tagcloud',
+		'mode'            => 'edit',
+		'supports'        => array( 'align' => false, 'multiple' => true, ),
+		'keywords'        => array( 'Row', 'Common' ),
+	) );
+}
+function acfgbc_SayHelloColumnsBlock_rc( $block, $content = '', $is_preview = false ) {
+	if ($is_preview) {
+		include_once get_template_directory().'/parts/editor-styles.php';
+	}
+	include get_template_directory() . '/parts/SayHelloColumnsBlock.php';
+}

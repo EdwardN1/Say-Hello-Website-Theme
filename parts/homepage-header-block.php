@@ -1,3 +1,12 @@
+<?php $anchor_tag = get_field( 'anchor_tag' ); ?>
+<?php
+$magAtt = '';
+$idAtt = '';
+if ( $anchor_tag ) {
+	$magAtt = ' data-magellan-target="' . $anchor_tag . '"';
+	$idAtt = ' id="'.$anchor_tag.'"';
+}
+?>
 <?php
 
 $image                 = get_field( 'image' );
@@ -36,7 +45,7 @@ $desktop_background = get_template_directory_uri() . '/assets/images/homepage-he
 
 ?>
 
-    <div class="grid-container nopadding red-spacer">
+    <div<?php echo $idAtt; ?><?php echo $magAtt; ?> class="grid-container nopadding red-spacer">
         <div class="large-12 homepage-header sh-container">
             <div class="sh-background show-for-med-large" style="background-image: url(<?php echo $imageURL; ?>);">
                 <div class="sh-background" style="background-image: url(<?php echo $desktop_background; ?>)"></div>

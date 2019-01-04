@@ -4,6 +4,74 @@
   background-position: center top;
   background-repeat: no-repeat;
   color: $white;
-  padding-top: 15em;
+  padding-top: 12em;
   padding-bottom: 2em;
+  .contact-description {
+    padding-top: 3em;
+    padding-bottom: 2em;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .contacts {
+    a {
+      display: block;
+      font-size: 36px;
+      line-height: 1;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .buttons {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    .green-button {
+      width: 170px;
+      height: 60px;
+      &:after {
+        background-image: url(../images/button-scroll-arrow-up.png);
+      }
+      &:hover {
+        &:after {
+          background-image: url(../images/button-scroll-arrow-up-hover.png);
+        }
+      }
+    }
+  }
+  .footer-section {
+    span {
+      font-size: 12px;
+      font-weight: bold;
+      color: #00536d;
+      opacity: 0.3;
+      padding: 1.5em;
+      @include breakpoint(359px) {
+        padding: 3em;
+      }
+      @include breakpoint(550px) {
+        padding: 1em;
+      }
+      a {
+        font-size: 12px;
+        font-weight: bold;
+        color: #00536d;
+        text-decoration: underline;
+        &:hover {
+          color: #00536D;
+        }
+      }
+    }
+  }
+}
+
+@include mui-series {
+  .contact-block .contact-description {
+    @include mui-queue(0.5s, 0s, fade(), slide($direction: up));
+  }
+  .contact-block .contacts {
+    @include mui-queue(0.5s, 0s, slide($direction: up),fade());
+  }
+  .contact-block .buttons {
+    @include mui-queue(0.5s, 0s, slide($direction: up),fade());
+  }
 }
